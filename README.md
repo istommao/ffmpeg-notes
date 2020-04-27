@@ -8,6 +8,16 @@ ffmpeg notes
 ffmpeg -i input.mp4 -vn -y -acodec copy output.aac
 ```
 
+## 音频转码
+
+```shell
+ffmpeg -i demo.wav -vn -ar 44100 -ac 2 -b:a 192k demo.mp3
+```
+
+```shell
+ls *.wav | xargs -L 1 -I % ffmpeg -i % -vn -ar 44100 -ac 2 -b:a 192k %.mp3
+```
+
 ## 图片或视频旋转
 
 https://stackoverflow.com/questions/3937387/rotating-videos-with-ffmpeg
