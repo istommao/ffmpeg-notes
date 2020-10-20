@@ -2,6 +2,15 @@
 ffmpeg notes
 
 
+## 视频裁剪
+
+```bash
+ffmpeg -y -ss 5 -t 13 -accurate_seek -i input.mp4 -codec copy -avoid_negative_ts 1 output.mp4
+```
+
+- [ffmpeg视频精准剪切](https://zhuanlan.zhihu.com/p/97914917)
+
+
 ## 从视频中取出音频
 
 ```bash

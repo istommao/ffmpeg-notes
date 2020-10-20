@@ -21,3 +21,11 @@ ffmpeg -i {input_file} -vf "transpose=1" {output_file}
 2 = 90CounterClockwise
 3 = 90Clockwise and Vertical Flip
 ```
+
+## 视频裁剪
+
+```bash
+ffmpeg -y -ss 5 -t 13 -accurate_seek -i input.mp4 -codec copy -avoid_negative_ts 1 output.mp4
+```
+
+- [ffmpeg视频精准剪切](https://zhuanlan.zhihu.com/p/97914917)
