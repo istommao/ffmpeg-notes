@@ -57,3 +57,15 @@ http://www.52im.net/thread-228-1-1.html
 
 http://www.ruanyifeng.com/blog/2020/01/ffmpeg.html
 
+
+## 提取视频字幕
+
+```bash
+ffmpeg -i input.mkv -c copy -map 0:s:0 subtitle.ass
+```
+
+## 合并视频和字幕
+
+```bash
+ffmpeg -i input.mp4 -vf "ass=subtitle.ass" output.mp4
+```
